@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "karma": "~0.10.2",
-    "karma-qunit": "*"
+    "karma-qunit": "*",
+    "emblem-brunch": "git+https://github.com/machty/emblem-brunch.git"
   }
 }

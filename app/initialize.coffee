@@ -6,7 +6,7 @@ require 'config/store'
 # Load all modules in order automagically. Ember likes things to work this
 # way so everything is in the App.* namespace.
 folderOrder = [
-  'initializers', 'mixins', 'routes', 'models', 'views', 'controllers',
+  'initializers', 'mixins', 'routes', 'models', 'fixtures', 'views', 'controllers',
   'helpers', 'templates', 'components'
 ]
 

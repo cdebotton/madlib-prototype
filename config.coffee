@@ -26,5 +26,10 @@ exports.config =
     templates:
       precompile: true
       root: 'templates'
-      defaultExtension: 'hbs'
+      defaultExtension: 'emblem'
       joinTo: 'javascripts/app.js' : /^app/
+      paths:
+        jquery: 'vendor/scripts/jquery.js'
+        ember: 'vendor/scripts/ember.js'
+        handlebars: 'vendor/scripts/handlebars.js'
+        emblem: 'vendor/scripts/emblem.js'
