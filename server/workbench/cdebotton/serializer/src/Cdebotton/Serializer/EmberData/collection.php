@@ -22,12 +22,12 @@ class Collection extends EloquentCollection {
 
     $this->each(function($model) use (&$relations)
     {
-            $relations = array_merge_recursive($model->relationsToArray(), $relations);
+      $relations = array_merge_recursive($model->relationsToArray(), $relations);
     });
 
     $this->each(function($model) use (&$items)
     {
-            $items[] = $model->toEmberArray(false);
+      $items[] = $model->toEmberArray(false);
     });
 
     $array = array($modelKey => $items);

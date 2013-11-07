@@ -67,7 +67,7 @@ return array(
 			'driver'   => 'pgsql',
 			'host'     => 'localhost',
 			'database' => 'madlib',
-			'username' => 'cdebotton',
+			'username' => 'debotton',
 			'password' => '',
 			'charset'  => 'utf8',
 			'prefix'   => '',
