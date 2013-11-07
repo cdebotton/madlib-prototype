@@ -5,8 +5,8 @@
   </header>
   <div id="filters">
     <h3>Nice to Meet You</h3>
-    <p>{{view App.DropdownView contentBinding='groups' key='viewers' id="viewers-select"}}, We'd love to show you our {{view App.DropdownView contentBinding='groups' key='work' id="work-select"}} that {{view App.DropdownView contentBinding='groups' key='team' id="team-select"}} has collaborated on.</p>
-    <p><small>Please also check out our {{view App.DropdownView contentBinding='groups' key='culture' id="culture-select"}} and {{view App.DropdownView contentBinding='groups' key='misc' id="misc-select"}} while you're here!</small></p>
+    <div class="filter-group">{{view App.DropdownView contentBinding='groups' key='viewers' id="viewers-select"}}, We'd love to show you our {{view App.DropdownView contentBinding='groups' key='work' id="work-select"}} that {{view App.DropdownView contentBinding='groups' key='team' id="team-select"}} has collaborated on.</div>
+    <div class="filter-group"><small>Please also check out our {{view App.DropdownView contentBinding='groups' key='culture' id="culture-select"}} and {{view App.DropdownView contentBinding='groups' key='misc' id="misc-select"}} while you're here!</small></div>
     <a href="#">View</a>
   </div>
 </div>

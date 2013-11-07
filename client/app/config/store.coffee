@@ -1,5 +1,5 @@
 App.Adapter = DS.RESTAdapter.extend
-  host: 'http://bu.dev'
+  host: 'http://united.dev'
   namespace: 'api/1'
 
 App.Serializer = DS.RESTSerializer.extend
@@ -10,5 +10,4 @@ App.Serializer = DS.RESTSerializer.extend
 
 
 module.exports = App.Store = DS.Store.extend
-  revision: 13
   adapter: App.Adapter

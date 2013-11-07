@@ -3,6 +3,7 @@ module.exports = App.DropdownView = Ember.View.extend
   tagName: 'span'
   classNames: ['dropdown']
   selected: null
+  isActive: false
 
   init: ->
     key = @get 'key'
@@ -16,9 +17,8 @@ module.exports = App.DropdownView = Ember.View.extend
 
   displayName: (->
     if @selected? then return @selected.get 'title'
-  ).property('@each.filter')
+  ).property 'selected'
 
   click: ->
-    @createChildView App.OptionsView, {
-      content: @get 'group.filters'
-    }
+    @toggleProperty 'isActive'
+
