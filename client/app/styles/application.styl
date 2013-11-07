@@ -1,0 +1,64 @@
+@import 'nib'
+@import '_fonts'
+
+$primaryColor = #ee4133
+
+h1, h2, h3, h4, h5, h6
+  margin 0
+
+fullHeight()
+  height 100%
+  height auto !important
+  min-height 100%
+
+*, *:after, *:before
+  box-sizing border-box
+
+html
+  height 100%
+
+html, body
+  margin 0
+  height 100%
+
+#brooklyn-united
+  height 100%
+  & > .ember-view
+    height 100%
+
+.panel
+  background-color $primaryColor
+  min-height 100%
+  height auto
+  &.hero
+    padding 115px 200px 0
+    text-align center
+    h1, h2
+      font-family fontBold()
+    h1
+      color #fff
+      font-size 72px
+    h2
+      color #000
+      font-size 32px
+
+#filters
+  width 800px
+  margin 0 auto
+  text-align center
+  margin-top 90px
+  h3
+    font-size 72px
+    font-family fontBold()
+    color #000
+  p
+    font-size 40px
+    font-family fontRoman()
+    small
+      font-size 20px
+      font-family fontRoman()
+    .dropdown
+      border-bottom 1px dashed #fff
+      color #fff
+      cursor pointer
+      text-transform capitalize
