@@ -5,10 +5,17 @@ module.exports = App.DropdownView = Ember.View.extend
   selected: null
 
   init: ->
-    length = @get('content.filters').toArray().length
+    key = @get 'key'
+    groupFilter = @get('content').filter (record) ->
+      record.get('title') is key
+    @group = groupFilter[0]
+    length = @group.get('filters').toArray().length
     key = Math.floor Math.random() * length
-    @selected = @get('content.filters').objectAt key
+    @selected = @group.get('filters').objectAt key
 
   displayName: (->
     if @selected? then return @selected.get 'title'
   ).property('@each.filter')
+
+  click: ->
+    alert @get 'content.title'
