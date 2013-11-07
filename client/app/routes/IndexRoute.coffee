@@ -1,14 +1,25 @@
 module.exports = App.IndexRoute = Ember.Route.extend
-  model: -> @store.find 'filter'
-
+  model: -> @store.find 'group'
   setupController: (controller, model) ->
-    controller.set 'viewers', model.filter (record) ->
-      record.get('group.title') is 'viewers'
-    controller.set 'work', model.filter (record) ->
-      record.get('group.title') is 'work'
-    controller.set 'team', model.filter (record) ->
-      record.get('group.title') is 'team'
-    controller.set 'culture', model.filter (record) ->
-      record.get('group.title') is 'culture'
-    controller.set 'misc', model.filter (record) ->
-      record.get('group.title') is 'misc'
+    viewers = model.filter (record) ->
+      record.get('title') is 'viewers'
+    controller.set 'viewers', viewers[0]
+
+    work = model.filter (record) ->
+      record.get('title') is 'work'
+    controller.set 'work', work[0]
+
+
+    team = model.filter (record) ->
+      record.get('title') is 'team'
+    controller.set 'team', team[0]
+
+
+    culture = model.filter (record) ->
+      record.get('title') is 'culture'
+    controller.set 'culture', culture[0]
+
+
+    misc = model.filter (record) ->
+      record.get('title') is 'misc'
+    controller.set 'misc', misc[0]
