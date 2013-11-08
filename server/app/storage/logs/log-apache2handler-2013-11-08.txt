@@ -1,0 +1,155 @@
+[2013-11-08 00:15:48] log.ERROR: exception 'PDOException' with message 'SQLSTATE[08006] [7] could not connect to server: Connection refused
+	Is the server running on host "localhost" and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused
+	Is the server running on host "localhost" and accepting
+	TCP/IP connections on port 5432?' in /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:47
+Stack trace:
+#0 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(47): PDO->__construct('pgsql:host=loca...', 'debotton', '', Array)
+#1 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Connectors/PostgresConnector.php(35): Illuminate\Database\Connectors\Connector->createConnection('pgsql:host=loca...', Array, Array)
+#2 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(41): Illuminate\Database\Connectors\PostgresConnector->connect(Array)
+#3 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(128): Illuminate\Database\Connectors\ConnectionFactory->make(Array, 'pgsql')
+#4 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(64): Illuminate\Database\DatabaseManager->makeConnection('pgsql')
+#5 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2455): Illuminate\Database\DatabaseManager->connection(NULL)
+#6 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2421): Illuminate\Database\Eloquent\Model::resolveConnection(NULL)
+#7 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1510): Illuminate\Database\Eloquent\Model->getConnection()
+#8 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1444): Illuminate\Database\Eloquent\Model->newBaseQueryBuilder()
+#9 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(530): Illuminate\Database\Eloquent\Model->newQuery()
+#10 /Users/cdebotton/www/madlib-prototype/server/app/repositories/EmberGroupRepository.php(8): Illuminate\Database\Eloquent\Model::with('filters')
+#11 /Users/cdebotton/www/madlib-prototype/server/app/controllers/Api/V1/GroupsController.php(14): Repositories\EmberGroupRepository->all()
+#12 [internal function]: Api\V1\GroupsController->index()
+#13 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#14 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('index', Array)
+#15 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#16 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#17 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#18 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#19 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#20 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#21 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#22 /Users/cdebotton/www/madlib-prototype/server/public/index.php(49): Illuminate\Foundation\Application->run()
+#23 {main} [] []
+[2013-11-08 00:15:48] log.ERROR: exception 'PDOException' with message 'SQLSTATE[08006] [7] could not connect to server: Connection refused
+	Is the server running on host "localhost" and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused
+	Is the server running on host "localhost" and accepting
+	TCP/IP connections on port 5432?' in /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:47
+Stack trace:
+#0 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(47): PDO->__construct('pgsql:host=loca...', 'debotton', '', Array)
+#1 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Connectors/PostgresConnector.php(35): Illuminate\Database\Connectors\Connector->createConnection('pgsql:host=loca...', Array, Array)
+#2 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(41): Illuminate\Database\Connectors\PostgresConnector->connect(Array)
+#3 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(128): Illuminate\Database\Connectors\ConnectionFactory->make(Array, 'pgsql')
+#4 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(64): Illuminate\Database\DatabaseManager->makeConnection('pgsql')
+#5 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2455): Illuminate\Database\DatabaseManager->connection(NULL)
+#6 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2421): Illuminate\Database\Eloquent\Model::resolveConnection(NULL)
+#7 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1510): Illuminate\Database\Eloquent\Model->getConnection()
+#8 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1444): Illuminate\Database\Eloquent\Model->newBaseQueryBuilder()
+#9 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(530): Illuminate\Database\Eloquent\Model->newQuery()
+#10 /Users/cdebotton/www/madlib-prototype/server/app/repositories/EmberGroupRepository.php(8): Illuminate\Database\Eloquent\Model::with('filters')
+#11 /Users/cdebotton/www/madlib-prototype/server/app/controllers/Api/V1/GroupsController.php(14): Repositories\EmberGroupRepository->all()
+#12 [internal function]: Api\V1\GroupsController->index()
+#13 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#14 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('index', Array)
+#15 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#16 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#17 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#18 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#19 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#20 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#21 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#22 /Users/cdebotton/www/madlib-prototype/server/public/index.php(49): Illuminate\Foundation\Application->run()
+#23 {main} [] []
+[2013-11-08 00:16:04] log.ERROR: exception 'PDOException' with message 'SQLSTATE[08006] [7] could not connect to server: Connection refused
+	Is the server running on host "localhost" and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused
+	Is the server running on host "localhost" and accepting
+	TCP/IP connections on port 5432?' in /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:47
+Stack trace:
+#0 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(47): PDO->__construct('pgsql:host=loca...', 'cdebotton', '', Array)
+#1 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Connectors/PostgresConnector.php(35): Illuminate\Database\Connectors\Connector->createConnection('pgsql:host=loca...', Array, Array)
+#2 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(41): Illuminate\Database\Connectors\PostgresConnector->connect(Array)
+#3 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(128): Illuminate\Database\Connectors\ConnectionFactory->make(Array, 'pgsql')
+#4 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(64): Illuminate\Database\DatabaseManager->makeConnection('pgsql')
+#5 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2455): Illuminate\Database\DatabaseManager->connection(NULL)
+#6 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2421): Illuminate\Database\Eloquent\Model::resolveConnection(NULL)
+#7 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1510): Illuminate\Database\Eloquent\Model->getConnection()
+#8 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1444): Illuminate\Database\Eloquent\Model->newBaseQueryBuilder()
+#9 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(530): Illuminate\Database\Eloquent\Model->newQuery()
+#10 /Users/cdebotton/www/madlib-prototype/server/app/repositories/EmberGroupRepository.php(8): Illuminate\Database\Eloquent\Model::with('filters')
+#11 /Users/cdebotton/www/madlib-prototype/server/app/controllers/Api/V1/GroupsController.php(14): Repositories\EmberGroupRepository->all()
+#12 [internal function]: Api\V1\GroupsController->index()
+#13 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#14 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('index', Array)
+#15 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#16 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#17 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#18 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#19 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#20 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#21 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#22 /Users/cdebotton/www/madlib-prototype/server/public/index.php(49): Illuminate\Foundation\Application->run()
+#23 {main} [] []
+[2013-11-08 00:16:06] log.ERROR: exception 'PDOException' with message 'SQLSTATE[08006] [7] could not connect to server: Connection refused
+	Is the server running on host "localhost" and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused
+	Is the server running on host "localhost" and accepting
+	TCP/IP connections on port 5432?' in /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:47
+Stack trace:
+#0 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(47): PDO->__construct('pgsql:host=loca...', 'cdebotton', '', Array)
+#1 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Connectors/PostgresConnector.php(35): Illuminate\Database\Connectors\Connector->createConnection('pgsql:host=loca...', Array, Array)
+#2 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(41): Illuminate\Database\Connectors\PostgresConnector->connect(Array)
+#3 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(128): Illuminate\Database\Connectors\ConnectionFactory->make(Array, 'pgsql')
+#4 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(64): Illuminate\Database\DatabaseManager->makeConnection('pgsql')
+#5 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2455): Illuminate\Database\DatabaseManager->connection(NULL)
+#6 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2421): Illuminate\Database\Eloquent\Model::resolveConnection(NULL)
+#7 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1510): Illuminate\Database\Eloquent\Model->getConnection()
+#8 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1444): Illuminate\Database\Eloquent\Model->newBaseQueryBuilder()
+#9 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(530): Illuminate\Database\Eloquent\Model->newQuery()
+#10 /Users/cdebotton/www/madlib-prototype/server/app/repositories/EmberGroupRepository.php(8): Illuminate\Database\Eloquent\Model::with('filters')
+#11 /Users/cdebotton/www/madlib-prototype/server/app/controllers/Api/V1/GroupsController.php(14): Repositories\EmberGroupRepository->all()
+#12 [internal function]: Api\V1\GroupsController->index()
+#13 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#14 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('index', Array)
+#15 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#16 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#17 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#18 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#19 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#20 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#21 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#22 /Users/cdebotton/www/madlib-prototype/server/public/index.php(49): Illuminate\Foundation\Application->run()
+#23 {main} [] []
+[2013-11-08 00:16:12] log.ERROR: exception 'PDOException' with message 'SQLSTATE[08006] [7] could not connect to server: Connection refused
+	Is the server running on host "localhost" and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused
+	Is the server running on host "localhost" and accepting
+	TCP/IP connections on port 5432?' in /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:47
+Stack trace:
+#0 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(47): PDO->__construct('pgsql:host=loca...', 'cdebotton', '', Array)
+#1 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Connectors/PostgresConnector.php(35): Illuminate\Database\Connectors\Connector->createConnection('pgsql:host=loca...', Array, Array)
+#2 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(41): Illuminate\Database\Connectors\PostgresConnector->connect(Array)
+#3 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(128): Illuminate\Database\Connectors\ConnectionFactory->make(Array, 'pgsql')
+#4 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(64): Illuminate\Database\DatabaseManager->makeConnection('pgsql')
+#5 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2455): Illuminate\Database\DatabaseManager->connection(NULL)
+#6 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2421): Illuminate\Database\Eloquent\Model::resolveConnection(NULL)
+#7 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1510): Illuminate\Database\Eloquent\Model->getConnection()
+#8 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1444): Illuminate\Database\Eloquent\Model->newBaseQueryBuilder()
+#9 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(530): Illuminate\Database\Eloquent\Model->newQuery()
+#10 /Users/cdebotton/www/madlib-prototype/server/app/repositories/EmberGroupRepository.php(8): Illuminate\Database\Eloquent\Model::with('filters')
+#11 /Users/cdebotton/www/madlib-prototype/server/app/controllers/Api/V1/GroupsController.php(14): Repositories\EmberGroupRepository->all()
+#12 [internal function]: Api\V1\GroupsController->index()
+#13 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(138): call_user_func_array(Array, Array)
+#14 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('index', Array)
+#15 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Routing/Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#16 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#17 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Routing/Route.php(80): call_user_func_array(Object(Closure), Array)
+#18 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Routing/Route.php(47): Illuminate\Routing\Route->callCallable()
+#19 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Routing/Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#20 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(574): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#21 /Users/cdebotton/www/madlib-prototype/server/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(550): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#22 /Users/cdebotton/www/madlib-prototype/server/public/index.php(49): Illuminate\Foundation\Application->run()
+#23 {main} [] []
