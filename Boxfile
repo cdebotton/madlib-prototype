@@ -25,3 +25,9 @@ web1:
     - "php artisan migrate"
 cache1:
   type: redis
+<<<<<<< HEAD
+=======
+db1:
+  name: bumadlib-staging
+  type: mysql
+>>>>>>> parent of 4e0ef8c... Fixing gitignore.
