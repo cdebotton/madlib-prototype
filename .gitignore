@@ -25,10 +25,4 @@ node_modules/
 # Brunch folder for temporary files.
 tmp/
 
-# Brunch output folder.
-<<<<<<< HEAD
-=======
-public/
->>>>>>> parent of 4e0ef8c... Fixing gitignore.
-
 bower_components/
