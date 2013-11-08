@@ -1,13 +1,14 @@
 <div class="hero madlibs panel">
   <header id="madlib-header">
+    <img src="/img/logo.png" alt="Brooklyn United" id="logo">
     <h1>Hello</h1>
     <h2>We are Brooklyn United</h2>
   </header>
   <div id="filters">
     <h3>Nice to Meet You</h3>
-    <div class="filter-group">{{view App.DropdownView contentBinding='groups' key='viewers' id="viewers-select"}}, We'd love to show you our {{view App.DropdownView contentBinding='groups' key='work' id="work-select"}} that {{view App.DropdownView contentBinding='groups' key='team' id="team-select"}} has collaborated on.</div>
+    <div class="filter-group">{{view App.DropdownView contentBinding='groups' key='viewers' id="viewers-select"}}, We'd love to show you {{view App.DropdownView contentBinding='groups' key='work' id="work-select"}} that {{view App.DropdownView contentBinding='groups' key='team' id="team-select"}} has collaborated on.</div>
     <div class="filter-group"><small>Please also check out our {{view App.DropdownView contentBinding='groups' key='culture' id="culture-select"}} and {{view App.DropdownView contentBinding='groups' key='misc' id="misc-select"}} while you're here!</small></div>
-    <a href="#">View</a>
+    <button type="button" id="view">View</button>
   </div>
 </div>
 

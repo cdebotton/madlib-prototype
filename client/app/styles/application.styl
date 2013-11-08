@@ -26,6 +26,9 @@ html, body
   & > .ember-view
     height 100%
 
+#logo
+  margin-bottom 30px
+
 .panel
   background-color $primaryColor
   min-height 100%
@@ -54,16 +57,24 @@ html, body
   .filter-group
     font-size 40px
     font-family fontRoman()
+    letter-spacing 2px
+    &+.filter-group
+      margin-top 50px
     small
-      font-size 20px
+      font-size 18px
       font-family fontRoman()
+      .option-item
+        font-size 18px
+        padding 8px 10px
+        width 200px
     .dropdown
       position relative
+      &#viewers-select
+        text-transform capitalize
       .display
         border-bottom 1px dashed #fff
         color #fff
         cursor pointer
-        text-transform capitalize
         position relative
         &.is-active
           z-index 1000
@@ -77,9 +88,9 @@ html, body
   background-color #000
   opacity 0
   visibility hidden
-  transition all 500ms
+  transition all 200ms
   &.is-active
-    opacity 0.8
+    opacity 0.7
     visibility visible
 .options-list
   display inline-block
@@ -101,19 +112,19 @@ html, body
       transform rotateX(0deg) translateZ(0) scale(1)
       box-shadow 0 0 1px rgba(0, 0, 0, 0.35)
       &:nth-child(1)
-        transition-delay 100ms
+        transition-delay 0
         z-index 2
       &:nth-child(2)
-        transition-delay 200ms
+        transition-delay 0
         z-index 3
       &:nth-child(3)
-        transition-delay 300ms
+        transition-delay 0
         z-index 4
       &:nth-child(4)
-        transition-delay 400ms
+        transition-delay 0
         z-index 5
       &:nth-child(5)
-        transition-delay 500ms
+        transition-delay 0
         z-index 6
   .option-item
     padding 20px 10px
@@ -121,7 +132,7 @@ html, body
     transform-origin 50% 0
     transform rotateX(90deg) translateZ(-100px) scale(1.2)
     box-shadow -10px -10px 30px rgba(0, 0, 0, 0.1)
-    transition all 75ms linear
+    transition transform 75ms linear
     background-color rgba(255, 255, 255, 0.8)
     font-family fontLight()
     position relative
@@ -129,5 +140,47 @@ html, body
       background-color $primaryColor
       color #fff
     &:hover
+      background-color lighten($primaryColor, 20%)
       transform scale(1.1)
       z-index 1000
+      box-shadow 0 0 10px rgba(0, 0, 0, 0.75)
+      &~.option-item
+        transform translateY(7px)
+    &:nth-child(1)
+      transition-delay 100ms
+      z-index 2
+    &:nth-child(2)
+      transition-delay 200ms
+      z-index 3
+    &:nth-child(3)
+      transition-delay 300ms
+      z-index 4
+    &:nth-child(4)
+      transition-delay 400ms
+      z-index 5
+    &:nth-child(5)
+      transition-delay 500ms
+      z-index 6
+#view
+  width 94px
+  height 94px
+  background-color #b1211d
+  border-radius 100px
+  border none
+  margin-top 55px
+  color #fff
+  text-transform uppercase
+  font-family fontLight()
+  font-size 24px
+  letter-spacing 2px
+  background-image url('/img/carrot-down.png')
+  background-repeat no-repeat
+  background-position center 65px
+  transition all 75ms ease-in
+  &:active, &:focus
+    outline none
+    border none
+  &:hover
+    background-color darken(@background-color, 20%)
+  &:active
+    background-color darken(@background-color, 40%)
