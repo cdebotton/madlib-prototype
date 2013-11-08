@@ -12,23 +12,23 @@ module.exports = App.Filter.FIXTURES = [
   group: 1
 ,
   id: 4
-  title: 'all'
+  title: 'all of our work'
   group: 2
 ,
   id: 5
-  title: 'video'
+  title: 'our video work'
   group: 2
 ,
   id: 6
-  title: 'interactive'
+  title: 'our interactive work'
   group: 2
 ,
   id: 7
-  title: 'branding'
+  title: 'our branding work'
   group: 2
 ,
   id: 8
-  title: 'campaign'
+  title: 'our campaign work'
   group: 2
 ,
   id: 9
@@ -36,15 +36,15 @@ module.exports = App.Filter.FIXTURES = [
   group: 3
 ,
   id: 10
-  title: 'development'
+  title: 'the development team'
   group: 3
 ,
   id: 11
-  title: 'design'
+  title: 'the design team'
   group: 3
 ,
   id: 12
-  title: 'partners'
+  title: 'the partners'
   group: 3
 ,
   id: 13
