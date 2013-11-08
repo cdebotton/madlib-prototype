@@ -2,6 +2,8 @@ sysPath = require 'path'
 
 exports.config =
   # See http://brunch.io/#documentation for documentation.
+  paths:
+    public: '../server/public'
   files:
     javascripts:
       joinTo:
