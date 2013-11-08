@@ -17,12 +17,12 @@ web1:
     - app/storage/sessions
     - app/storage/views
   after_build:
-    - "if [ ! -f composer.phar ]; then curl -s http://getcomposer.org/installer | php; fi; cd server; php ../composer.phar install --prefer-source"
+    - "if [ ! -f composer.phar ]; then curl -s http://getcomposer.org/installer | php; fi; cd server; php ../composer.phar install --prefer-source;"
   after_deploy:
-    - "php artisan cache:clear"
-    - "rm -f app/storage/views/*"
+    - "cd server; php artisan cache:clear"
+    - "cd server; rm -f app/storage/views/*"
   before_deploy:
-    - "php artisan migrate"
+    - "cd server; php artisan migrate"
 cache1:
   type: redis
 db1:
