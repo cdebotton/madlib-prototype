@@ -25,6 +25,3 @@ web1:
     - "php artisan migrate"
 cache1:
   type: redis
-db1:
-  name: bumadlib-staging
-  type: mysql
