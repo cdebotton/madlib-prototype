@@ -1,5 +1,5 @@
 App.Adapter = DS.RESTAdapter.extend
-  namespace: 'api/1'
+b  namespace: 'api/1'
 
 App.Serializer = DS.RESTSerializer.extend
   normalize: (property, hash, type) ->
@@ -10,3 +10,4 @@ App.Serializer = DS.RESTSerializer.extend
 
 module.exports = App.Store = DS.Store.extend
   adapter: App.Adapter
+
