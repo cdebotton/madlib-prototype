@@ -16,8 +16,6 @@ class PivotTweetUserTable extends Migration {
 			$table->increments('id');
 			$table->integer('tweet_id')->unsigned()->index();
 			$table->integer('user_id')->unsigned()->index();
-			$table->foreign('tweet_id')->references('id')->on('tweets')->onDelete('cascade');
-			$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 		});
 	}
 

@@ -16,8 +16,6 @@ class PivotInstagramUserTable extends Migration {
 			$table->increments('id');
 			$table->integer('instagram_id')->unsigned()->index();
 			$table->integer('user_id')->unsigned()->index();
-			$table->foreign('instagram_id')->references('id')->on('instagrams')->onDelete('cascade');
-			$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 		});
 	}
 

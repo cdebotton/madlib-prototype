@@ -21,6 +21,11 @@ html, body
   margin 0
   height 100%
 
+.container
+  max-width 960px
+  position relative
+  margin 0 auto
+
 #brooklyn-united
   height 100%
   & > .ember-view
@@ -30,12 +35,13 @@ html, body
   margin-bottom 30px
 
 .panel
-  background-color $primaryColor
+  background-color #fff
   min-height 100%
   height auto
   &.hero
     padding 115px 200px 0
     text-align center
+    background-color $primaryColor
     h1, h2
       font-family fontBold()
     h1
@@ -177,6 +183,7 @@ html, body
   background-repeat no-repeat
   background-position center 65px
   transition all 75ms ease-in
+  margin-bottom 20px
   &:active, &:focus
     outline none
     border none
@@ -184,3 +191,132 @@ html, body
     background-color darken(@background-color, 20%)
   &:active
     background-color darken(@background-color, 40%)
+
+
+#reset
+  border none
+  background-color transparent
+  background-image url('/img/up.png')
+  background-repeat no-repeat
+  background-position center top
+  overflow hidden
+  text-indent -999px
+  position relative
+  margin 0 auto
+  width 89px
+  height 42px
+  display block
+  &:active
+  &:focus
+    outline none
+
+#project-list
+  font-family fontBold()
+  list-style none
+  margin 0
+  padding 0
+  overflow hidden
+  font-size 26px
+  width 1000px
+  display block
+  margin 50px auto 20px
+  li
+    float left
+    &+li
+      margin-left 30px
+  a
+    text-decoration none
+    color #d4d4d4
+    transition color 175ms ease-in
+    &:hover
+      color darken(@color, 20%)
+    &.active
+      color #000
+
+#paginator
+  position relative
+  display block
+  text-align center
+  margin-bottom 30px
+  .index
+    font-family fontBold()
+    color #d4d4d4
+    font-size 12px
+    text-transform uppercase
+  .carot
+    vertical-align middle
+    width 15px
+    height 18px
+    background-position center center
+    background-repeat no-repeat
+    display inline-block
+    text-decoration none
+    overflow hidden
+    text-indent -999px
+    &.right
+      background-image url('/img/carot-right.png')
+    &.left
+      background-image url('/img/carot-left.png')
+
+.feed
+  a
+    color #33b3ee
+    text-decoration none
+  .block
+    .icon-ig
+      position absolute
+      bottom 15px
+      left 50%
+      margin-left -12.5px
+      background-repeat no-repeat
+      background-position center center
+      display block
+      text-indent -999px
+      overflow hidden
+      width 25px
+      height 25px
+      background-image url('/img/instagram.png')
+    .backer
+      background linear-gradient(top, 60% rgba(0, 0, 0, 0), 90% rgba(0, 0, 0, 0.75))
+      position absolute
+      top 5px
+      left 5px
+      bottom 5px
+      right 5px
+    hgroup
+      padding 5px
+      position absolute
+      left 5px
+      bottom 5px
+      width 100%
+      color #fff
+      font-size 12px
+      h2
+        font-family fontRoman()
+        font-size 12px
+      h3
+        font-family fontLight()
+        font-size 12px
+    img
+      width 100%
+      height auto
+    &.large
+      width 100%
+    &.medium
+      width 50%
+      padding 5px
+    &.twitter
+      padding 75px 75px 40px
+      width 50%
+      background-repeat no-repeat
+      background-position center 45px
+      background-image url('/img/twitter.png')
+      text-align center
+      font-size 22px
+      font-family fontLight()
+    &.ig
+    &.user
+      width 25%
+      padding 5px
+    &.user hgroup
+      padding 20px
