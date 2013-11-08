@@ -19,10 +19,10 @@ web1:
   after_build:
     - "if [ ! -f composer.phar ]; then curl -s http://getcomposer.org/installer | php; fi; cd server; php ../composer.phar install --prefer-source;"
   after_deploy:
-    - "cd server; php artisan cache:clear"
-    - "cd server; rm -f app/storage/views/*"
+    - "php /var/www/server/artisan cache:clear"
+    - "rm -f /var/www/server/app/storage/views/*"
   before_deploy:
-    - "cd server; php artisan migrate"
+    - "php /var/www/server/artisan migrate"
 cache1:
   type: redis
 db1:
