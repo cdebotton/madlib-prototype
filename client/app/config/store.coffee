@@ -1,5 +1,4 @@
 App.Adapter = DS.RESTAdapter.extend
-  host: 'http://united.dev'
   namespace: 'api/1'
 
 App.Serializer = DS.RESTSerializer.extend
